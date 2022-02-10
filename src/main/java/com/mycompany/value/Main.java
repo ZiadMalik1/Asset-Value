@@ -148,18 +148,20 @@ public class Main implements ActionListener{
 
     private double getStockAssets() throws IOException{
         double luvHoldings = 50.570824;
-        double aaplHoldings = 24.631325;
+        double aaplHoldings = 25.646155;
         double disHoldings = 14.802847;
         double amznHoldings = 1;
         double cbayHoldings = 1;
-        double krHoldings = 36.03012;
-        double nvdaHoldings = 8;
+        double krHoldings = 38.04049;
+        double nvdaHoldings = 4;
         double vooHoldings = 3;
-        double msftHoldings = 2;
-        double pyplHoldings = 2;
+        double msftHoldings = 2.0037;
+        double pyplHoldings = 3;
         double xswHoldings = 2;
-        double btcHoldings = 0.02100755;
-        double ethHoldings = 0.20847565;
+        double btcHoldings = 0.02138327;
+        double ethHoldings = 0.21395754;
+        double fbHoldings = 3;
+        double uHoldings = 4;
         double assets = (this.getStock("LUV") * luvHoldings)
                 + (this.getStock("AAPL") * aaplHoldings)
                 + (this.getStock("DIS")  * disHoldings)
@@ -171,6 +173,8 @@ public class Main implements ActionListener{
                 + (this.getStock("AMZN") * amznHoldings)
                 + (this.getStock("NVDA") * nvdaHoldings)
                 + (this.getStock("VOO")  * vooHoldings)
+                + (this.getStock("U") * uHoldings)
+                + (this.getStock("FB") * fbHoldings)
                 + (this.getCrypto("https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT") * btcHoldings)
                 + (this.getCrypto("https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT") * ethHoldings);
         return assets;
